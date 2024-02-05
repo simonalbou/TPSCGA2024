@@ -46,6 +46,7 @@
 
 # Visual Studio Code directory
 .vscode/
+omnisharp.json
 
 # Gradle cache directory
 .gradle/
@@ -83,11 +84,55 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+# Temporary Folder
+**/Assets/**/Temp
+**/Assets/**/Temp.meta
+
+# Addressable assets
+**/Assets/AddressableAssetsData/Windows*
+**/Assets/AddressableAssetsData/ProfileDataSourceSettings.asset*
+
+# Performance
+**/Assets/Resources/PerformanceTestRunInfo.json
+**/Assets/Resources/PerformanceTestRunInfo.json.meta
+Profiling/
+
+# FMOD
+FMODStudioCache.asset*
+fmod.log
+fmod_editor.log
+**/StreamingAssets/*.bank*
+
+# FMOD studio (In folder FMOD)
+/FMOD/**/**.user
+/FMOD/**/**.unsaved
+/FMOD/**/**.cache
+/FMOD/**/**.restore
+
+# User specific
+**/UserSettings/
+
+# Screenshots
+**/Screenshots/*.png
+
+# Saves
+/PrototypeMaggie/Saves/*
+!/PrototypeMaggie/Saves/FTUE
+
+# Build generated files
+**/Assets/AddressableAssetsData/link.xml
+**/Assets/AddressableAssetsData/link.xml.meta
+**/Assets/StreamingAssets.meta
+**/Assets/Resources.meta
+**/ProjectSettings/ScriptableBuildPipeline.json
+
+# Miscellaneous
 *.bin*
-
 *.jko~
-
 Thumbs.db
 Desktop.ini
 .DS_Store
 *.png~
+
+# Allow PrototypeMaggie.SourceGenerators files
+!/PrototypeMaggie.SourceGenerators/*.csproj
