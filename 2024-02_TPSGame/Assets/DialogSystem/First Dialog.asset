@@ -1,0 +1,142 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6853b9e53131efc44afd9919bfbc3c2f, type: 3}
+  m_Name: First Dialog
+  m_EditorClassIdentifier: 
+  csvFile: {fileID: 4900000, guid: cfbdaa8075c675b49990309b19e04449, type: 3}
+  dialogLines:
+  - key: LINE_1
+    speakerName: Character name 1
+    englishText: Lorem ipsum, this is a first test sentence
+    frenchText: "Lorem ipsum, ceci est une premi\xE8re phrase de test"
+    spanishText: "Lorem ipsum 1\r"
+    portraitID: 
+    eventID: 
+  - key: LINE_2
+    speakerName: Character name 2
+    englishText: This is a second dialog line!
+    frenchText: "Ceci est une deuxi\xE8me ligne de dialogue"
+    spanishText: "Lorem ipsum 2\r"
+    portraitID: 
+    eventID: 
+  - key: LINE_3
+    speakerName: Character name 3
+    englishText: Lorem ipsum 3
+    frenchText: Lorem ipsum 3
+    spanishText: "Lorem ipsum 3\r"
+    portraitID: 
+    eventID: 
+  - key: LINE_4
+    speakerName: Character name 4
+    englishText: Lorem ipsum 4
+    frenchText: Lorem ipsum 4
+    spanishText: "Lorem ipsum 4\r"
+    portraitID: 
+    eventID: 
+  - key: LINE_5
+    speakerName: Character name 5
+    englishText: Lorem ipsum 5
+    frenchText: Lorem ipsum 5
+    spanishText: "Lorem ipsum 5\r"
+    portraitID: 
+    eventID: 
+  - key: LINE_6
+    speakerName: Character name 6
+    englishText: Lorem ipsum 6
+    frenchText: Lorem ipsum 6
+    spanishText: "Lorem ipsum 6\r"
+    portraitID: 
+    eventID: 
+  - key: LINE_7
+    speakerName: Character name 7
+    englishText: Lorem ipsum 7
+    frenchText: Lorem ipsum 7
+    spanishText: "Lorem ipsum 7\r"
+    portraitID: 
+    eventID: 
+  - key: LINE_8
+    speakerName: Character name 8
+    englishText: Lorem ipsum 8
+    frenchText: Lorem ipsum 8
+    spanishText: "Lorem ipsum 8\r"
+    portraitID: 
+    eventID: 
+  - key: LINE_9
+    speakerName: Character name 9
+    englishText: Lorem ipsum 9
+    frenchText: Lorem ipsum 9
+    spanishText: "Lorem ipsum 9\r"
+    portraitID: 
+    eventID: 
+  - key: LINE_10
+    speakerName: Character name 10
+    englishText: Lorem ipsum 10
+    frenchText: Lorem ipsum 10
+    spanishText: "Lorem ipsum 10\r"
+    portraitID: 
+    eventID: 
+  - key: LINE_11
+    speakerName: Character name 11
+    englishText: Lorem ipsum 11
+    frenchText: Lorem ipsum 11
+    spanishText: "Lorem ipsum 11\r"
+    portraitID: 
+    eventID: 
+  - key: LINE_12
+    speakerName: Character name 12
+    englishText: Lorem ipsum 12
+    frenchText: Lorem ipsum 12
+    spanishText: "Lorem ipsum 12\r"
+    portraitID: 
+    eventID: 
+  - key: LINE_13
+    speakerName: Character name 13
+    englishText: Lorem ipsum 13
+    frenchText: Lorem ipsum 13
+    spanishText: "Lorem ipsum 13\r"
+    portraitID: 
+    eventID: 
+  - key: LINE_14
+    speakerName: Character name 14
+    englishText: Lorem ipsum 14
+    frenchText: Lorem ipsum 14
+    spanishText: "Lorem ipsum 14\r"
+    portraitID: 
+    eventID: 
+  - key: LINE_15
+    speakerName: Character name 15
+    englishText: Lorem ipsum 15
+    frenchText: Lorem ipsum 15
+    spanishText: "Lorem ipsum 15\r"
+    portraitID: 
+    eventID: 
+  - key: LINE_16
+    speakerName: Character name 16
+    englishText: Lorem ipsum 16
+    frenchText: Lorem ipsum 16
+    spanishText: "Lorem ipsum 16\r"
+    portraitID: 
+    eventID: 
+  - key: LINE_17
+    speakerName: Character name 17
+    englishText: Lorem ipsum 17
+    frenchText: Lorem ipsum 17
+    spanishText: "Lorem ipsum 17\r"
+    portraitID: 
+    eventID: 
+  - key: LINE_18
+    speakerName: Character name 18
+    englishText: Lorem ipsum 18
+    frenchText: Lorem ipsum 18
+    spanishText: Lorem ipsum 18
+    portraitID: 
+    eventID: 
