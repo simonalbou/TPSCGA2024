@@ -140,3 +140,68 @@ MonoBehaviour:
     spanishText: Lorem ipsum 18
     portraitID: 
     eventID: 
+  color: {r: 1, g: 0, b: 0, a: 0.6156863}
+  someCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2.6496234
+      outSlope: 2.6496234
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.06990628
+    - serializedVersion: 3
+      time: 0.50438315
+      value: 0.5065745
+      inSlope: 3.6326756
+      outSlope: 3.6326756
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.03102127
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  someVector: {x: 1, y: 2, z: -5}
+  someGradient:
+    serializedVersion: 2
+    key0: {r: 0, g: 0.17274189, b: 1, a: 1}
+    key1: {r: 1, g: 0.89104825, b: 0, a: 1}
+    key2: {r: 0, g: 0, b: 0, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 1}
+    key4: {r: 0, g: 0, b: 0, a: 1}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 65535
+    ctime2: 0
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 22552
+    atime2: 32768
+    atime3: 41249
+    atime4: 65535
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_ColorSpace: 0
+    m_NumColorKeys: 2
+    m_NumAlphaKeys: 5

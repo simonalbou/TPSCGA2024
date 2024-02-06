@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 using System;
+using System.IO;
 
 [CustomEditor(typeof(DialogData))]
 public class DialogDataInspector : Editor
@@ -31,8 +32,7 @@ public class DialogDataInspector : Editor
         EditorGUILayout.Space(32);
         if (GUILayout.Button("Convert to JSON"))
         {
-            string jsonRepresentation = JsonUtility.ToJson(dialogData, true);
-            Debug.Log(jsonRepresentation);
+            ConvertToJSON();
         }
     }
 
@@ -80,6 +80,19 @@ public class DialogDataInspector : Editor
 
         // valider / sauvegarder l'asset
         EditorUtility.SetDirty(dialogData);
+    }
+
+    void ConvertToJSON()
+    {
+        string jsonRepresentation = JsonUtility.ToJson(dialogData, true);
+        
+        string folderPath = Application.persistentDataPath + "/SaveFiles";
+        if (!Directory.Exists(folderPath)) Directory.CreateDirectory(folderPath);
+
+        string filePath = folderPath+"/Test.json";
+        if (!File.Exists(filePath)) File.Create(filePath);
+
+        File.WriteAllText(filePath, jsonRepresentation);
     }
 
     // old version - demo

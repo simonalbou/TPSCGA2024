@@ -16,4 +16,9 @@ public class DialogData : ScriptableObject
 {
     public TextAsset csvFile;
     public DialogLine[] dialogLines;
+
+    public Color color;
+    public AnimationCurve someCurve;
+    public Vector3 someVector;
+    public Gradient someGradient;
 }
