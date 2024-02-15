@@ -17,6 +17,11 @@ public struct Ingredient
     public int amount; // solids only
     public float volume; // liquids only
     public Color color;
+
+    #if UNITY_EDITOR
+    public float ingredientEnumWidth;
+    public bool everInitialized;
+    #endif
 }
 
 public class RecipeComponent : MonoBehaviour

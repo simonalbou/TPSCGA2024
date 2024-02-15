@@ -31,5 +31,7 @@ public class DialogData : ScriptableObject
     public Vector3 someVector;
     public Gradient someGradient;
 
+    public Ingredient someIngredient;
+
     #endregion
 }

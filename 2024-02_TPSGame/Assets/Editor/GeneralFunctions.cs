@@ -7,7 +7,7 @@ using UnityEditor.SceneManagement;
 
 public class GeneralFunctions
 {
-    [MenuItem("Tools/Simon/Browse Scene %w")]
+    [MenuItem("Tools/Simon/Browse Scene")]
     public static void BrowseScene()
     {
         Stopwatch sw = new Stopwatch();

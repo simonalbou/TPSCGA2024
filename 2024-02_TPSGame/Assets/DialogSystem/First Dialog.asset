@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6853b9e53131efc44afd9919bfbc3c2f, type: 3}
   m_Name: First Dialog
   m_EditorClassIdentifier: 
+  foldoutState: 0
   csvFile: {fileID: 4900000, guid: cfbdaa8075c675b49990309b19e04449, type: 3}
   dialogLines:
   - key: LINE_1
@@ -205,3 +206,12 @@ MonoBehaviour:
     m_ColorSpace: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 5
+  someIngredient:
+    enabled: 1
+    ingredientType: 0
+    name: 
+    amount: 0
+    volume: 0
+    color: {r: 1, g: 1, b: 1, a: 1}
+    ingredientEnumWidth: 0
+    everInitialized: 1
