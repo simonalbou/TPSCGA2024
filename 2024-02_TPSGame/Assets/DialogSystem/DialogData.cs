@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 [System.Serializable]
@@ -14,6 +15,14 @@ public struct DialogLine
 [CreateAssetMenu(fileName = "NewDialogData.asset", menuName = "Custom/Dialog Data", order = 100)]
 public class DialogData : ScriptableObject
 {
+
+#if UNITY_EDITOR
+    [SerializeField]
+    bool foldoutState;
+#endif
+
+    #region parameters
+
     public TextAsset csvFile;
     public DialogLine[] dialogLines;
 
@@ -21,4 +30,6 @@ public class DialogData : ScriptableObject
     public AnimationCurve someCurve;
     public Vector3 someVector;
     public Gradient someGradient;
+
+    #endregion
 }

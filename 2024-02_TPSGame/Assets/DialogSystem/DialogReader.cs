@@ -7,8 +7,13 @@ public class DialogReader : MonoBehaviour
 {
     public TextMeshProUGUI dialogText, speakerNameText;
     public DialogData dialogData;
-
+    [HideInInspector] public Color backgroundColor;
     int currentLine;
+
+    // soit la variable est privée, soit elle est publique
+    // soit la variable est sérialisée, soit elle ne l'est pas
+    // soit on affiche la variable, soit pas
+
 
     void Start()
     {

@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-//[CanEditMultipleObjects]
-[CustomEditor(typeof(SampleComponent))]
+[CanEditMultipleObjects]
+//[CustomEditor(typeof(SampleComponent))]
 public class SampleCustomInspector : Editor
 {
     SampleComponent myComponent;
@@ -22,16 +22,19 @@ public class SampleCustomInspector : Editor
     {
         //base.OnInspectorGUI();
 
+        EditorGUILayout.LabelField("Approche 1 : bruteforce");
+
         EditorGUI.BeginChangeCheck();
 
         EditorGUILayout.Space(8);
         EditorGUILayout.LabelField("Parameters", EditorStyles.boldLabel); // GUIStyle : définit l'aspect du texte
 
         EditorGUILayout.BeginVertical("box");
+
         GUIContent speedText = new GUIContent("My Speed", "Number of units travelled in one second. Look, a tooltip!");
         float result = EditorGUILayout.FloatField(speedText, myComponent.speed);
         if (result >= 0) myComponent.speed = result;
-        //if (myComponent.speed < 0) myComponent.speed = 0;        
+
         myComponent.jumpsAllowed = EditorGUILayout.IntField("Jumps Allowed", myComponent.jumpsAllowed);
         myComponent.someSlider = EditorGUILayout.Slider("Slider Parameter", myComponent.someSlider, 1, 10);
         myComponent.acceleration = EditorGUILayout.CurveField("Acceleration", myComponent.acceleration);

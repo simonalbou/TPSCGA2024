@@ -11,9 +11,16 @@ public class DialogDataInspector : Editor
     bool buttonToggle;
     DialogData dialogData;
 
+    SerializedProperty dialogLines;
+
+    SerializedProperty foldoutState;
+
     void OnEnable()
     {
-        dialogData = target as DialogData;    
+        dialogData = target as DialogData;
+
+        dialogLines = serializedObject.FindProperty("dialogLines");
+        foldoutState = serializedObject.FindProperty("foldoutState");
     }
 
     public override void OnInspectorGUI()
@@ -21,6 +28,24 @@ public class DialogDataInspector : Editor
         base.OnInspectorGUI();
 
         EditorGUILayout.Space(32);
+
+        EditorGUILayout.BeginVertical("box");
+
+        serializedObject.Update();
+        foldoutState.boolValue = EditorGUILayout.Foldout(foldoutState.boolValue, "Cliquer pour déplier", true);
+        serializedObject.ApplyModifiedPropertiesWithoutUndo();
+        if (foldoutState.boolValue)
+        {
+            EditorGUILayout.LabelField("Liste des keys:", EditorStyles.boldLabel);
+            for (int i = 0; i < dialogLines.arraySize; i++)
+            {
+                SerializedProperty arrayElem = dialogLines.GetArrayElementAtIndex(i);
+                SerializedProperty keyProp = arrayElem.FindPropertyRelative("englishText");
+                EditorGUILayout.LabelField(keyProp.stringValue);
+            }
+        }
+
+        EditorGUILayout.EndVertical();
 
         EditorGUI.BeginDisabledGroup(dialogData.csvFile == null);
         if (GUILayout.Button("Copy contents from CSV to this Object"))
