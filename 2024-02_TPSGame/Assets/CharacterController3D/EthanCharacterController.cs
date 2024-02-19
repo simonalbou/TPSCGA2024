@@ -5,6 +5,7 @@ using UnityEngine;
 public class EthanCharacterController : MonoBehaviour
 {
     public float speed = 7;
+    public float gravity = -9.81f;
     public float rotateSpeedRatio = 1;
     public float camYawSpeed, camPitchSpeed;
     public bool invertYaw, invertPitch;
@@ -20,12 +21,21 @@ public class EthanCharacterController : MonoBehaviour
     void Update()
     {
         // convertir "move" en espace caméra
-        Vector3 move = Input.GetAxis("Horizontal") * camTransform.right + Input.GetAxis("Vertical") * camTransform.forward;
+        Vector3 camRight = camTransform.right;
+        camRight.y = 0;
+        camRight = camRight.normalized;
+        Vector3 camForward = camTransform.forward;
+        camForward.y = 0;
+        camForward = camForward.normalized;
+        Vector3 move = Input.GetAxis("Horizontal") * camRight + Input.GetAxis("Vertical") * camForward;
 
+        // exploiter "move" pour les données graphiques (animation, orientation)
         LookTowards(move);
-
-        ctrl.Move(move * speed * Time.deltaTime);
         animator.SetFloat("Speed", move.magnitude);
+
+        // on ajoute la gravité au move
+        move.y = gravity;
+        ctrl.Move(move * speed * Time.deltaTime);
 
         // camera rotation
         camPivotYaw.Rotate(Vector3.up * camYawSpeed * Time.deltaTime * Input.GetAxis("Horizontal_Cam") * (invertYaw ? -1 : 1));
