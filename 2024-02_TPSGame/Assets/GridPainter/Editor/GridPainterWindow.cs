@@ -101,6 +101,7 @@ public class GridPainterWindow : EditorWindow
         serializedObject.ApplyModifiedProperties();
 
         //if (e.type == EventType.MouseDown || e.type == EventType.MouseUp || (e.type == EventType.MouseMove && paintMode))
+        
         Repaint();
     }
 

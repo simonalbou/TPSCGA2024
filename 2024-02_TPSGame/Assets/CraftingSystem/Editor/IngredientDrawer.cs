@@ -8,7 +8,12 @@ public class IngredientDrawer : PropertyDrawer
 {
     public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
     {
-        float numberOfLines = 2;
+        float numberOfLines = 1;
+        SerializedProperty ingredientType = property.FindPropertyRelative("ingredientType");
+        if (ingredientType.enumValueIndex > 0)
+        {
+            numberOfLines++;
+        }
         float lineHeight = EditorGUIUtility.singleLineHeight + 1;
         return numberOfLines * lineHeight;
         //return base.GetPropertyHeight(property, label);
@@ -60,7 +65,7 @@ public class IngredientDrawer : PropertyDrawer
         currentX += nameWidth + space;
         Rect amountOrVolumeRect = new Rect(currentX, position.y, amountOrVolumeWidth, position.height);
         currentX += amountOrVolumeWidth + space;
-        Rect colorRect = new Rect(currentX, position.y + position.height, colorWidth, position.height);
+        Rect colorRect = new Rect(currentX, position.y, colorWidth, position.height);
 
         //EditorGUI.DrawRect(position, Color.yellow);
         //EditorGUI.DrawRect(enabledRect, Color.cyan);

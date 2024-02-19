@@ -41,4 +41,13 @@ public class GeneralFunctions
         sw.Stop();
         UnityEngine.Debug.Log($"The whole operation took {sw.ElapsedTicks} ticks, which is {sw.ElapsedMilliseconds} milliseconds.");
     }
+
+    [MenuItem("GameObject/Custom/My Object")]
+    public static void CreateComplexObject()
+    {
+        GameObject go = new GameObject("My New Object");
+        Undo.RegisterCreatedObjectUndo(go, "Created some complex object");
+        Undo.AddComponent<BoxCollider>(go);
+        EditorSceneManager.MarkSceneDirty(go.scene);
+    }
 }
