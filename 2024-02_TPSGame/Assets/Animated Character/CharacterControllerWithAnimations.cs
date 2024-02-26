@@ -30,6 +30,6 @@ public class CharacterControllerWithAnimations : MonoBehaviour
 
     public void PlayFootstepSound(string helloWorldMsg)
     {
-        Debug.Log(helloWorldMsg);
+        //Debug.Log(helloWorldMsg);
     }
 }
