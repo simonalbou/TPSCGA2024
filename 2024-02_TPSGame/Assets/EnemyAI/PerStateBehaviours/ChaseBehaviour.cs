@@ -13,14 +13,14 @@ public class ChaseBehaviour : BaseEnemyBehaviour
 
         referenceHolder.onChase?.Invoke();
 
-        agent.SetDestination(referenceHolder.playerTransform.position);
+        agent.SetDestination(GameManager.instance.playerTransform.position);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         if (Time.time > recalculationDelay + recalculationTimestamp)
-            SetDestination(referenceHolder.playerTransform.position);
+            SetDestination(GameManager.instance.playerTransform.position);
 
         if (Input.GetButtonDown("Fire1"))
             animator.SetTrigger("Hurt");

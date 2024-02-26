@@ -12,8 +12,6 @@ public class BaseEnemyBehaviour : StateMachineBehaviour
 
     [System.NonSerialized] public NavMeshAgent agent;
     [System.NonSerialized] public EnemyAIHandler referenceHolder;
-
-    int indexOfCurrentTarget;
     [System.NonSerialized] public float recalculationTimestamp;
 
     public void SetDestination(Vector3 dest)
@@ -32,7 +30,7 @@ public class BaseEnemyBehaviour : StateMachineBehaviour
 
         agent.autoBraking = agentAutoBraking;
         agent.speed = agentSpeed;
-        indexOfCurrentTarget = 0;
+        recalculationTimestamp = Time.time;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
